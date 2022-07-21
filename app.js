@@ -1,7 +1,7 @@
 const fileInput = document.getElementById("formFileLg");
 
 const resultimage = document.getElementById("results-image");
-
+var colorThief;
 fileInput.addEventListener("change", (e) => {
   const file = e.target.files[0];
 
@@ -14,16 +14,38 @@ fileInput.addEventListener("change", (e) => {
 });
 
 function extractcolors() {
-  const colorThief = new ColorThief();
+  colorThief = new ColorThief();
   const img = document.getElementById("results-image");
   if (img.complete) {
-    console.log(colorThief.getColor(img));
-    console.log(colorThief.getPalette(img, 6, 10));
+    createpaletteui();
   } else {
     resultimage.addEventListener("load", function () {
-      console.log(colorThief.getColor(img));
-      console.log(colorThief.getPalette(img, 6, 10));
+      createpaletteui();
     });
+  }
+}
+
+function createpaletteui() {
+  const img = document.getElementById("results-image");
+  console.log(colorThief.getColor(img));
+  let domcolor = colorThief.getColor(img);
+  let hexvalue = rgbToHex(domcolor[0], domcolor[1], domcolor[2]);
+
+  document.getElementById("dominantcolordiv").innerHTML = `<div class="row">
+    <div style="background-color: ${hexvalue}; color: white" class="col-12 pt-2 pb-2">
+        ${hexvalue}
+    </div>
+  </div>`;
+  console.log(colorThief.getPalette(img, 6, 10));
+  let palcolor = colorThief.getPalette(img, 6, 10);
+  let paletterow = document.getElementById("paletterow");
+  paletterow.innerHTML = ``;
+
+  for (var i = 0; i < palcolor.length; i++) {
+    let hexvalue = rgbToHex(palcolor[i][0], palcolor[i][1], palcolor[i][2]);
+    paletterow.innerHTML += `<div  style="background-color: ${hexvalue}; color: white" class="col-4 pt-2 pb-2">
+    ${hexvalue}
+</div>`;
   }
 }
 
