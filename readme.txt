@@ -5,3 +5,8 @@ Links to free resources used
 https://unsplash.com/photos/O6N9RV2rzX8?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
 
 
+
+tasks:
+
+- add click to copy
+- add footer
