@@ -2,6 +2,7 @@ const fileInput = document.getElementById("formFileLg");
 
 const resultimage = document.getElementById("results-image");
 var colorThief;
+
 fileInput.addEventListener("change", (e) => {
   const file = e.target.files[0];
 
@@ -85,3 +86,5 @@ const rgbToHex = (r, g, b) =>
       return hex.length === 1 ? "0" + hex : hex;
     })
     .join("");
+
+extractcolors();
