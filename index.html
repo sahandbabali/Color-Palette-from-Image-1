@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Color Picker Test 1</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+
+      <style>
+
+      </style>
+</head>
+
+<body>
+      <div class="container ">
+            <!-- start of navbar -->
+            <nav class="navbar navbar-dark bg-primary">
+                  <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                              <img src="/logo.png" alt="" width="32" class="d-inline-block align-text-top">
+                              Color Palette Generator Title
+                        </a>
+                  </div>
+            </nav>
+            <!-- end of navbar-->
+
+            <!-- start of main card -->
+            <div class="card text-center mt-5 mb-5 pt-5 pb-5">
+                  <!-- <div class="card-header">
+                        Featured
+                  </div> -->
+                  <div class="card-body">
+                        <h5 class="card-title">Color Palette Generator from Image</h5>
+                        <p class="card-text">Upload or take a picture with your phone and get the color palette
+                              generated from it.</p>
+
+                        <!-- <label for="formFileLg" class="form-label">Large file input example</label> -->
+                        <input class="form-control form-control-lg mt-5" id="formFileLg" type="file">
+
+                  </div>
+                  <!-- <div class="card-footer text-muted">
+                        2 days ago
+                  </div> -->
+            </div>
+            <!-- end of main card -->
+            <!-- start of result card -->
+            <div id="results-card">
+                  <div class="card mb-3">
+                        <div class="row g-0">
+                              <div class="col-md-4">
+                                    <img id="results-image" src="test.jpg" class="img-fluid rounded-start" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                    <div class="card-body">
+                                          <h5 class="card-title">Dominant Color</h5>
+                                          <p class="card-text">This is a wider card with supporting text below as a
+                                                natural
+                                                lead-in to additional content. This content is a little bit longer.</p>
+
+                                          <h5 class="card-title">Palette</h5>
+                                          <div class="container text-center">
+                                                <div class="row">
+                                                      <div style="background-color: blue ;" class="col-4">
+                                                            Column
+                                                      </div>
+                                                      <div class="col-4">
+                                                            Column
+                                                      </div>
+                                                      <div class="col-4">
+                                                            Column
+                                                      </div>
+                                                      <div class="col-4">
+                                                            Column
+                                                      </div>
+                                                      <div class="col-4">
+                                                            Column
+                                                      </div>
+                                                      <div class="col-4">
+                                                            Column
+                                                      </div>
+
+                                                </div>
+                                          </div>
+                                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                          </p>
+
+
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <!-- end of result card -->
+
+      </div>
+
+
+      <script src="./app.js"></script>
+</body>
+
+</html>
