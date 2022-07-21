@@ -5,7 +5,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Color Picker Test 1</title>
+      <title>Color Palette Generator 1</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
@@ -21,11 +21,11 @@
 <body>
       <div class="container ">
             <!-- start of navbar -->
-            <nav class="navbar navbar-dark bg-primary">
+            <nav class="navbar bg-light ">
                   <div class="container-fluid">
                         <a class="navbar-brand" href="#">
                               <img src="/logo.png" alt="" width="32" class="d-inline-block align-text-top">
-                              Color Palette Generator Title
+                              Color Palette Generator
                         </a>
                   </div>
             </nav>
@@ -37,12 +37,28 @@
                         Featured
                   </div> -->
                   <div class="card-body">
-                        <h5 class="card-title">Color Palette Generator from Image</h5>
+                        <h5 class="card-title">Color Palette Generator</h5>
                         <p class="card-text">Upload or take a picture with your phone and get the color palette
                               generated from it.</p>
 
                         <!-- <label for="formFileLg" class="form-label">Large file input example</label> -->
-                        <input class="form-control form-control-lg mt-5" id="formFileLg" type="file">
+                        <input class="form-control form-control mt-5" id="formFileLg" type="file">
+
+
+                        <!-- --------------------------------------------- -->
+                        <!-- 
+                        <div class="input-group mt-5">
+                              <input type="file" class="form-control " id="formFileLg"
+                                    aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                              <select class="form-select" aria-label="Default select example">
+                                    <option value="1">3 Color Pallete</option>
+                                    <option selected value="2">6 Color Pallete</option>
+                                    <option value="3">9 Color Pallete</option>
+                              </select>
+                        </div> -->
+                        <!-- --------------------------------------------- -->
+
+
 
                   </div>
                   <!-- <div class="card-footer text-muted">
@@ -63,15 +79,45 @@
 
 
 
-                                          <h5 class="card-title mt-4">Palette</h5>
+                                          <h5 class="card-title mt-4">Color Palette</h5>
                                           <div id="palettediv" class="container text-center">
                                                 <div id="paletterow" class="row">
 
                                                 </div>
                                           </div>
-                                          <p class="card-text mt-4"><small class="text-muted">share and download links
-                                                      here</small>
+                                          <p class="card-text mt-4 text-center"><small class="text-muted">Click to copy
+                                                      the HEX value</small>
                                           </p>
+                                          <div class="btn-group" role="group"
+                                                aria-label="Button group with nested dropdown">
+
+
+                                                <div class="btn-group" role="group">
+                                                      <button type="button"
+                                                            class="btn btn-outline-primary dropdown-toggle"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                            Download
+                                                      </button>
+                                                      <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#">Image</a></li>
+                                                            <li><a class="dropdown-item" href="#">PDF</a></li>
+                                                            <li><a class="dropdown-item" href="#">CSV</a></li>
+                                                      </ul>
+                                                </div>
+
+                                                <div class="btn-group" role="group">
+                                                      <button type="button"
+                                                            class="btn btn-outline-primary dropdown-toggle"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                            Share
+                                                      </button>
+                                                      <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#">Twitter</a></li>
+                                                            <li><a class="dropdown-item" href="#">Pinterest</a></li>
+                                                            <li><a class="dropdown-item" href="#">Embed</a></li>
+                                                      </ul>
+                                                </div>
+                                          </div>
 
 
                                     </div>
@@ -80,6 +126,8 @@
                   </div>
             </div>
             <!-- end of result card -->
+
+
 
       </div>
 

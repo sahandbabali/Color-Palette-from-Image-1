@@ -31,6 +31,7 @@ function createpaletteui() {
 
   console.log(colorThief.getPalette(img, 6, 10));
   let palcolor = colorThief.getPalette(img, 6, 10);
+
   let paletterow = document.getElementById("paletterow");
   paletterow.innerHTML = ``;
 
@@ -38,6 +39,8 @@ function createpaletteui() {
     let hexvalue = rgbToHex(palcolor[i][0], palcolor[i][1], palcolor[i][2]);
     paletterow.innerHTML += `<div  style="background-color: ${hexvalue}; color: white" class="col-4 pt-2 pb-2">
     ${hexvalue}
+    <br>
+    rgb(${palcolor[i][0]},${palcolor[i][1]},${palcolor[i][2]})
 </div>`;
   }
 }
