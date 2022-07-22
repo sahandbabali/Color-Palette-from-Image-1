@@ -37,7 +37,7 @@ function createpaletteui() {
 
   for (var i = 0; i < palcolor.length; i++) {
     let hexvalue = rgbToHex(palcolor[i][0], palcolor[i][1], palcolor[i][2]);
-    paletterow.innerHTML += `<div onclick="copyhextoclip(this)"  style="background-color: ${hexvalue}; color: white" class="col-sm-12 col-lg-4 pt-2 pb-2">
+    paletterow.innerHTML += `<div onclick="copyhextoclip(this)"  style="background-color: ${hexvalue}; color: white" class="col-sm-12 col-md-12  col-lg-4 pt-2 pb-2">
     ${hexvalue}
     <br>
     rgb(${palcolor[i][0]},${palcolor[i][1]},${palcolor[i][2]})
