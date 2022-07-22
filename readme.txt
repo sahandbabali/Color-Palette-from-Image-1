@@ -9,4 +9,6 @@ https://unsplash.com/photos/O6N9RV2rzX8?utm_source=unsplash&utm_medium=referral&
 tasks:
 
 - add click to copy
-- add footer
+- chroma.js for generating new variants
+- add footer - done
+
