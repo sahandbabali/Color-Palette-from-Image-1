@@ -59,6 +59,14 @@ function copyhextoclip(element) {
   // console.log(rgba2hex(element.style.backgroundColor));
   let hexclipboard = rgba2hex(element.style.backgroundColor);
   navigator.clipboard.writeText(hexclipboard);
+
+  // display a toast to the user
+  let toastLiveExample = document.getElementById("liveToast");
+  document.getElementById(
+    "toastmessage"
+  ).innerHTML = `&#127912; ${hexclipboard} copied to clipboard`;
+  const toast = new bootstrap.Toast(toastLiveExample);
+  toast.show();
 }
 
 const rgba2hex = (rgba) =>

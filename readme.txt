@@ -8,7 +8,7 @@ https://unsplash.com/photos/O6N9RV2rzX8?utm_source=unsplash&utm_medium=referral&
 
 tasks:
 
-- add click to copy
 - chroma.js for generating new variants
+- add click to copy + toast - done
 - add footer - done
 
